@@ -80,8 +80,9 @@ try{
   const rep=ia(quest);
   const trad=fr(rep);
  //var quest=arg.join(" ");
+  console.log("ourt "+trad);
   repondre(trad);
-}catch(e){var err_mot=fr(e);repondre("oupsaa une erreur : "+err_mot)}
+}catch(e){var err_mot=fr(e);repondre("oupsaa une erreur : "+e)}
   
 
 })
