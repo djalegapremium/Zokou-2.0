@@ -75,7 +75,7 @@ const {repondre,ms,arg}=commandeOptions;
 
   if(!arg.join(" "))
   {return repondre("Veuillez poser votre question .")}
-  var quest = arg.join(" ");
+  var quest = arg[0];
 try{
 
  //var quest=arg.join(" ");
