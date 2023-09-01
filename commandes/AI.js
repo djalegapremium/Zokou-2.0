@@ -1,5 +1,7 @@
-/*const { zokou } = require('../framework/zokou');
-const { openai } = require('openai');
+const { zokou } = require('../framework/zokou');
+const tr =require("translate-google-api")
+const deepai=require("deepai")
+/*const { openai } = require('openai');
 
 zokou({ nomCom: "gpt", categorie: "AI" }, async (dest, zk, commandeOptions) => {
   const { arg, repondre } = commandeOptions;
@@ -49,3 +51,36 @@ zokou({ nomCom: "gpt", categorie: "AI" }, async (dest, zk, commandeOptions) => {
   
   repondre(` ${response}`);
 }); */
+
+function fr(text){
+
+  tr(text,{to:"fr"}).then(
+    rep=>{return rep.[0]};
+  ).catch(e=>{console.log("oups une erreur : ",e)})
+}
+
+function ia(requete){
+
+
+  
+deepia.setApiKey("quickstart-QUdJIGlzIGNvbWluZy4uLi4K");
+
+  deepai("text-generator",{text:requete}).then(reponse=>{return  reponse.output;}).catch(e=>{console.log("🥵🥵🥵🥵")})
+
+}
+
+zokou({nomCom:"zokou",reaction:"📡",categorie:"IA"},async(dest,zk,commandeOptions)=>{
+
+const {repondre,ms,arg}=commandeOptions;
+
+  if(!arg.join(" "))
+  {return repondre("Veuillez poser votre question .")}
+  
+try{
+
+ var quest=arg.join(" ");
+  repondre(fr(ia(quest)));
+}catch((e)=>{repondre("oups une erreur : "+e)})
+  
+
+})
