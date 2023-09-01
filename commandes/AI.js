@@ -55,7 +55,7 @@ zokou({ nomCom: "gpt", categorie: "AI" }, async (dest, zk, commandeOptions) => {
 function fr(text){
 
   tr(text,{to:"fr"}).then(
-    rep=>{return rep.[0]};
+    rep=>{return rep[0];}
   ).catch(e=>{console.log("oups une erreur : ",e)})
 }
 
@@ -80,7 +80,7 @@ try{
 
  var quest=arg.join(" ");
   repondre(fr(ia(quest)));
-}catch((e)=>{repondre("oups une erreur : "+e)})
+}catch(e){repondre("oups une erreur : "+e)}
   
 
 })
