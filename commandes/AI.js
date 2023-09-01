@@ -63,7 +63,7 @@ function ia(requete){
 
 
   
-deepia.setApiKey("quickstart-QUdJIGlzIGNvbWluZy4uLi4K");
+deepai.setApiKey("quickstart-QUdJIGlzIGNvbWluZy4uLi4K");
 
   deepai("text-generator",{text:requete}).then(reponse=>{return  reponse.output;}).catch(e=>{console.log("🥵🥵🥵🥵")})
 
@@ -80,7 +80,7 @@ try{
 
  var quest=arg.join(" ");
   repondre(fr(ia(quest)));
-}catch(e){repondre("oups une erreur : "+e)}
+}catch(e){repondre("oupsaa une erreur : "+e)}
   
 
 })
