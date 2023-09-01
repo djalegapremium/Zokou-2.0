@@ -80,7 +80,7 @@ try{
 
  //var quest=arg.join(" ");
   repondre(fr(ia(quest)));
-}catch(e){repondre("oupsaa une erreur : "+e)}
+}catch(e){repondre("oupsaa une erreur : "+fr(e)}
   
 
 })
