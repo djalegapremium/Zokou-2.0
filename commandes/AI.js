@@ -77,10 +77,11 @@ const {repondre,ms,arg}=commandeOptions;
   {return repondre("Veuillez poser votre question .")}
   var quest = arg[0];
 try{
-
+  const rep=ia(quest);
+  const trad=fr(rep);
  //var quest=arg.join(" ");
-  repondre(fr(ia(quest)));
-}catch(e){repondre("oupsaa une erreur : "+fr(e))}
+  repondre(trad);
+}catch(e){var err_mot=fr(e);repondre("oupsaa une erreur : "+err_mot)}
   
 
 })
