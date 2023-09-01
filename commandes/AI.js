@@ -75,10 +75,10 @@ const {repondre,ms,arg}=commandeOptions;
 
   if(!arg.join(" "))
   {return repondre("Veuillez poser votre question .")}
-  
+  var quest = arg.join(" ");
 try{
 
- var quest=arg.join(" ");
+ //var quest=arg.join(" ");
   repondre(fr(ia(quest)));
 }catch(e){repondre("oupsaa une erreur : "+e)}
   
