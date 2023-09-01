@@ -65,7 +65,7 @@ function ia(requete){
   
 deepai.setApiKey("quickstart-QUdJIGlzIGNvbWluZy4uLi4K");
 
-  deepai("text-generator",{text:requete}).then(reponse=>{return  reponse.output;}).catch(e=>{console.log("🥵🥵🥵🥵")})
+  deepai.callStandardApi("text-generator",{text:requete}).then(reponse=>{return  reponse.output;}).catch(e=>{console.log("🥵🥵🥵🥵")})
 
 }
 
