@@ -77,8 +77,8 @@ const {repondre,ms,arg}=commandeOptions;
   {return repondre("Veuillez poser votre question .")}
   var quest = arg[0];
 try{
-  const rep=ia(quest);
-  const trad=fr(rep);
+  const rep=await ia(quest);
+  const trad=await fr(rep);
  //var quest=arg.join(" ");
   console.log("ourt "+trad);
   repondre(trad);
