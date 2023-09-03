@@ -72,7 +72,7 @@ var rep =await deepai.callStandardApi("text-generator",{text:requete});
   return rep.output;
 }
 
-zokou({nomCom:"z",reaction:"📡",categorie:"IA"},async(dest,zk,commandeOptions)=>{
+zokou({nomCom:"zokou",reaction:"📡",categorie:"IA"},async(dest,zk,commandeOptions)=>{
 
 const {repondre,ms,arg}=commandeOptions;
 
