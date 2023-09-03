@@ -13,7 +13,7 @@ WORKDIR /root/Zokou_Bot/
 
 COPY package.json .
 RUN npm install pm2 -g
-RUN npm install --legacy-peer-deps
+RUN yarn install --network-concurrency 1
 
 COPY . .
 
