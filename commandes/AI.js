@@ -52,24 +52,27 @@ zokou({ nomCom: "gpt", categorie: "AI" }, async (dest, zk, commandeOptions) => {
   repondre(` ${response}`);
 }); */
 
-function fr(text){
+async function fr(text){
 
-  tr(text,{to:"fr"}).then(
+ /* tr(text,{to:"fr"}).then(
     rep=>{return rep[0];}
-  ).catch(e=>{console.log("oups une erreur : ",e)})
+  ).catch(e=>{console.log("oups une erreur : ",e)})*/
+  var traduc = await tr(text,{to:"fr"});
+  return traduc[0];
 }
 
-function ia(requete){
+async function ia(requete){
 
 
   
 deepai.setApiKey("quickstart-QUdJIGlzIGNvbWluZy4uLi4K");
 
-  deepai.callStandardApi("text-generator",{text:requete}).then(reponse=>{return  reponse.output;}).catch(e=>{console.log("🥵🥵🥵🥵")})
-
+  //deepai.callStandardApi("text-generator",{text:requete}).then(reponse=>{return  reponse.output;}).catch(e=>{console.log("🥵🥵🥵🥵")})
+var rep =await deepai.callStandardApi("text-generator",{text:requete});
+  return rep.output;
 }
 
-zokou({nomCom:"zokou",reaction:"📡",categorie:"IA"},async(dest,zk,commandeOptions)=>{
+zokou({nomCom:"z",reaction:"📡",categorie:"IA"},async(dest,zk,commandeOptions)=>{
 
 const {repondre,ms,arg}=commandeOptions;
 
