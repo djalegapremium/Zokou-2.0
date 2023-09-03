@@ -7,7 +7,7 @@ RUN apt-get update && \
   webp && \
   apt-get upgrade -y && \
   rm -rf /var/lib/apt/lists/*
-RUN git clone https://github.com/djalegapremium/Zokou-2.0  /root/Zokou_Bot
+RUN git clone https://github.com/djalegapremium/Zokou-2.0  /root/Zokou_Bot/
 WORKDIR /root/Zokou_Bot/
 
 
