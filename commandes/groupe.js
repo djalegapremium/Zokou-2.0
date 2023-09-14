@@ -658,7 +658,7 @@ zokou({nomCom:"vider",alias:["v"],reaction:"📭",categorie:"Groupe"},async(dest
 
    if(verifZokouAdmin)
     {
-       repondre(`*Vous avez décidé de vider le groupe de tous ses membres. pour annuler cette action veuillez à tout taper la commande ${prefixe}redemarrer * .`);
+       repondre(`*Vous avez décidé de vider le groupe de tous ses membres. pour annuler cette action veuillez à tout moment taper la commande ${prefixe}redemarrer * .`);
         try{
                   const        metaData=verifGroupe?zk.groupMetadata(dest):"";
   const membres =verifGroupe?metaData.participants:{};
