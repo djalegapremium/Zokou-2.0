@@ -366,7 +366,7 @@ setTimeout(() => {
             //execution des commandes   
             if (verifCom) {
                 //await await zk.readMessages(ms.key);
-                const cd = evt.cm.find((zokou) => zokou.nomCom === (com));
+                const cd = evt.cm.find((zokou) => zokou.nomCom === (com))||evt.cm.find((zokou)=>zokou.alias && zokou.alias.includes(com));
                 if (cd) {
                     try {
                         reagir(origineMessage, zk, ms, cd.reaction);
