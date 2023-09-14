@@ -644,3 +644,40 @@ if(isImgRpd)
 
 })
 /******/
+zokou({nomCom:"vider",alias:["v"],reaction:"📭",categorie:"Groupe"},async(dest,zk,com)=>
+{
+
+    const{repondre,ms,verifGroupe,superUser,dev,verifAdmin,verifZokouAdmin,prefixe,groupeAdmin}=com 
+
+
+     if(!verifGroupe)
+    { return repondre(" ⛔️uniquement pour les groupes . ");}
+
+   if(!verifAdmin||!dev)
+    {return repondre("⛔️ désolé vous n êtes pas administrateur du groupe .");}
+
+   if(verifZokouAdmin)
+    {
+       repondre(`*Vous avez décidé de vider le groupe de tous ses membres. pour annuler cette action veuillez à tout taper la commande ${prefixe}redemarrer * .`);
+        try{
+                  const        metaData=verifGroupe?zk.groupMetadata(dest):"";
+  const membres =verifGroupe?metaData.participants:{};
+
+    for(let i of membres)
+    { 
+       if(i.admin==true)
+       {
+       }
+       else{zk.groupParticipantsUpdate(dest,[i.id],"remove")}
+}
+           }catch(e){}
+      
+    }else{return repondre("désolé je ne suis pas administrateur de ce groupe.")}
+
+
+
+
+})
+
+
+/////////////////////////
